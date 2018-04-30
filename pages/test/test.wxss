@@ -1,0 +1,12 @@
+.other-button-hover {
+  background-color: #495A80;
+}
+.button{
+  width: 180rpx;
+  height: 80rpx;
+}
+.section__title{
+  display: inline-flex;
+  padding-left:10rpx ;
+  padding-top: 30rpx;
+}

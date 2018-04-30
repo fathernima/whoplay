@@ -1,0 +1,32 @@
+#index{
+  display: inline ;
+}
+.image{
+  flex-direction: column;
+  border-radius: 50%;
+  align-items: center;
+}
+.texts{
+  font-size: 30rpx;
+  padding-left: 40rpx;
+}
+.nickname{
+  font-size: 30rpx;
+}
+.title{
+  font-size: 45rpx;
+}
+.labels{
+  display: inline-flex;
+  padding-left: 40rpx;
+  font-size: 40rpx;
+}
+.space{
+  padding-right: 20rpx;
+}
+.toright{
+  display: flex
+}
+.avatar{
+  padding-left: 200rpx;
+}

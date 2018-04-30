@@ -1,0 +1,40 @@
+<!--logs.wxml-->
+<!--view class="container log-list">
+  <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>
+</view-->
+
+
+<view class="labels">
+<text class="title" space='ensp'>WhoPlay  乎玩 \n个人游戏名片</text>
+<view class="avatar">
+    <text class="space"></text>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image class="image" style="width: 80rpx; height:80rpx; background-color: #ffffff;"  src="{{userInfo.avatarUrl}}" mode="aspectFit"></image>
+      <text class='nickname'>\n{{userInfo.nickName}}</text>
+    </block>
+</view>
+</view>
+
+<view>===============================</view>
+
+<view class="labels">
+<image class="image" style="width: 60rpx; height:60rpx; background-color: #ffffff;" src='../../sources/steam.png' mode="aspectFit"></image>
+<text class="space"></text>
+蒸汽：<input placeholder='id'placeholder-style='color:#dddddd'></input>
+</view>
+
+<view class="labels">
+<image class="image" style="width: 60rpx; height: 60rpx; background-color: #ffffff;" src='../../sources/blizzard.jpg' mode="aspectFit"></image>
+<text class="space"></text>
+战网：<input placeholder='id'placeholder-style='color:#dddddd'></input>
+</view>
+
+<view>===============================</view>
+
+<view class='texts'>玩过的游戏：</view>
+
+<image class="image" style="width: 90rpx; height: 90rpx; background-color: #ffffff;" src='../../sources/ow.jpg' mode="aspectFit"></image>
+<image class="image" style="width: 90rpx; height: 90rpx; background-color: #ffffff;" src='../../sources/oj.png' mode="aspectFit"></image>

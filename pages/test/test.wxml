@@ -1,0 +1,42 @@
+<view>选择厂商:</view>
+<view class="section__title">
+  <button class="button" bindtap="Blizzard" hover-class="other-button-hover" >Blizzard</button>
+  <button class="button" bindtap="Steam" hover-class="other-button-hover">Steam</button>
+  <button class="button" bindtap="Tencent" hover-class="other-button-hover">Tencent</button>
+  <button class="button" bindtap="Others" hover-class="other-button-hover">Others</button>
+</view>
+
+<view wx:if="{{index==0}}"> 
+  <checkbox-group bindchange="checkboxChange">
+    <label class="checkbox" wx:for="{{blizzard}}">
+      <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+  </checkbox-group>
+</view>
+
+<view wx:elif="{{index==1}}"> 
+  <checkbox-group bindchange="checkboxChange">
+      <label class="checkbox" wx:for="{{steam}}">
+        <checkbox wx:key="name" value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+      </label>
+    </checkbox-group>
+</view>
+
+<view wx:elif="{{index==2}}"> 
+  <checkbox-group bindchange="checkboxChange">
+      <label class="checkbox" wx:for="{{tencent}}">
+        <checkbox wx:key="name" value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+      </label>
+    </checkbox-group>
+</view>
+
+<view wx:elif="{{index==3}}"> 
+  <checkbox-group bindchange="checkboxChange">
+      <label class="checkbox" wx:for="{{others}}">
+        <checkbox wx:key="name" value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+      </label>
+    </checkbox-group>
+</view>
+
+<button class="button" bindtap="Submit" hover-class="other-button-hover">Submit</button>
+<view>{{parameter}}</view>
